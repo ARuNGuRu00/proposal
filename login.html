@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="login-page.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&family=Sixtyfour+Convergence&family=Space+Grotesk:wght@300..700&display=swap');
+        </style>
+        <script src="login-page.js"></script>
+    </head>
+    <head>
+        <div id="dummy">
+            <div class="head"></div>
+            <div class="heading">
+                <span>Proposal</span>
+                <div>
+                    <button id="check-in" onclick="checkFunc()">Check In</button>
+                    <button id="join" onclick="joinFunc()">Join</button>
+                </div>
+            </div>
+        </div>
+        <!--dum-end-->
+        <div id="log">
+            <div class="heading">
+                <span>Proposal</span>
+            </div>
+            <div id="option-frame" class="slide-animation">
+                <div id="join-but-con">
+                    <div style="font-size: 22px;width:200px;height:150px">
+                        Make some proposals to show your professionality.
+                        <span style="display: block;font-size: 17px;padding-top:20px;padding-bottom: 10px">Get a new account:</span>
+                    <button onclick="resFlip(),setTimeout(fun1,750),setTimeout(fun2,250)" id="join-but">JOIN ></button>
+                    </div>
+                </div>
+                <div id="check-but-con">
+                    <div style="font-size: 22px;width:200px;height:150px">
+                        The journey with your colleagues.
+                        <span style="display: block;font-size: 17px;padding-top:20px;padding-bottom: 10px;">Have an account already?</span>
+                    <button onclick="resFlip(),setTimeout(fun1,750),setTimeout(fun2,250)" id="check-but">Check In ></button>
+                    </div>  
+            </div>
+            </div>
+            <div id="con-frame" class="flip-animation">
+                <div id="con-content">
+                    <form action="">
+                        <label>Username:</label>
+                        <input type="text" required>
+                        <label>Password:</label>
+                        <input class="pass" type="password" required>
+                        <a href="">Forgot password?</a>
+                        <button>Check In ></button>
+                    </form>
+                </div>
+                <div id="con-content2">
+                    <form action="">
+                        <label>Email Id:</label>
+                        <input type="email" required>
+                        <button type="submit">JOIN ></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </head>
+</html>

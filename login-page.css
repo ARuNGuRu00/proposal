@@ -1,0 +1,233 @@
+body{
+    background-color: rgb(15, 13, 30);
+    color:rgb(230, 228, 253);
+    margin:0;
+   
+}
+#dummy{
+    background-image:radial-gradient(circle,rgb(15, 13, 30), rgb(51, 47, 85)); 
+    color:rgb(230, 228, 253);
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+
+.head{
+    position: relative;
+    height: 80px;
+    filter: blur(35px);
+    display: flex;
+    background-color:rgb(76, 67, 144);
+}
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left:20px;
+    padding-right:30px;
+    height:80px;
+    top:0;left:0;right:0;
+    position: absolute;
+    font-size:30px;
+    font-family: "Rock Salt";
+}
+
+.heading span{
+    transition: all 0.3s;
+}
+
+.heading span:hover{
+    transform:scale(1.2);
+}
+
+
+#check-in,#join{
+    border:none;
+    padding:10px 15px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#check-in{
+    background-color: rgb(109, 109, 224);
+    color:rgb(255, 255, 255);
+    border-radius: 15px 0 0 15px;
+    transition: all 0.3s;
+}
+#check-in:hover{
+    background-color:  rgb(126, 126, 251);
+    transform: scale(1.1);
+}
+#join{
+    background-color: rgb(21, 21, 79);
+    color:rgb(230, 228, 253);
+    border-radius: 0 15px 15px 0;
+}
+
+#join:hover{
+    background-color:  rgb(13, 13, 49);
+    transform: scale(1.1);
+}
+
+#log{
+    background-image:radial-gradient(circle,rgb(15, 13, 30), rgb(51, 47, 85)); 
+    color:rgb(230, 228, 253);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display:none;
+}
+
+#con-frame,#option-frame{
+    width:300px;
+    height:350px;
+    border:solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#option-frame{
+    background-color:  rgb(130, 7, 38);
+    color:rgb(230, 228, 253);
+    border-width: 2 0 2 2;
+    border-radius: 20px 0 0 20px;
+    box-shadow: -5px 0 15px rgb(228, 32, 42);
+    margin-right:25px;
+}
+
+.slide-animation{
+    animation:sliding 0.5s ease-in-out;
+    animation-delay: 0.5s;
+}
+
+#check-but-con{
+    display:none;
+}
+
+#join-but{
+    display:block;
+}
+
+#join-but-con button,#check-but-con button{
+    background-color:white;
+    display: flex;
+    padding-top:8px;
+    padding-bottom: 8px;
+    padding-left:10px;
+    padding-right:10px;
+    color: red;
+    border-radius: 5px 0 0 5px;
+    box-shadow: 0 0 5px white;
+    transition: box-shadow 0.3s;
+}
+
+#join-but-con button:hover,#check-but-con button:hover{
+    box-shadow: 0 0 10px white;
+}
+
+#join-but-con button:active,#check-but-con button:active{
+    background-color: red;
+    color:white;
+}
+
+.flip-animation{
+    animation: flips 0.5s ease-in-out;
+}
+
+#con-frame{
+    background-color: rgb(204, 201, 226);
+    color:rgb(0, 0, 0);
+    border-width:2 2 2 0;
+    border-radius: 0 20px 20px 0;
+    transform: scale(1.2);
+    box-shadow: 5px 0 15px rgb(89, 76, 187);
+    margin-left:25px;
+}
+
+#con-content input,#con-content2 input{
+    display:block;
+    background-color: rgb(89, 71, 227);
+    border:none;
+    padding:5px 10px;
+    border-radius: 2px;
+    margin:10px;
+    color: white;
+    font-size: 13px;
+}
+
+#con-content input:focus{
+    border:none;
+}
+
+input::-ms-reveal {
+    display: none;
+  }
+
+a{
+    display:block;
+    padding:0;
+    color:rgb(126, 126, 252);
+}
+
+a:hover{
+    color:rgb(48, 5, 5);
+}
+a:active{
+    color: white;
+}
+
+
+#con-content button,#con-content2 button{
+    margin-top:15px;
+    background-color:rgb(89, 71, 227);
+    border:none;
+    padding:5px 10px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    margin-left: 10px;
+    box-shadow: 0 0 2px rgb(89, 71, 227);
+    transition: box-shadow .3s;
+}
+
+#con-content button:hover,#con-content2 button:hover{
+    box-shadow: 0 0 5px rgb(89, 71, 227);
+}
+
+#con-content button:active,#con-content2 button:active{
+    background-color: white;
+    color: rgb(89, 71, 227);
+}
+
+#con-content2{
+    display:none;
+}
+
+
+
+@keyframes sliding{
+    0%{
+        transform:translate(0);
+    }
+    50%{
+        transform: translate(110%);
+    }
+    100%{
+        transform:translate(0);
+    }
+}
+
+@keyframes flips{
+    0%{
+        transform: scale(1,1);
+    }
+    50%{
+        transform:scale(0,1);
+    }
+    100%{
+        transform:scale(1,1);
+    }
+}
