@@ -5,7 +5,8 @@ body{
    
 }
 #dummy{
-    background-image:radial-gradient(circle,rgb(15, 13, 30), rgb(51, 47, 85)); 
+    /*background-image:radial-gradient(circle,rgb(15, 13, 30), rgb(51, 47, 85)); */
+    background-color: rgb(0, 0, 0);
     color:rgb(230, 228, 253);
     height: 100%;
     width: 100%;
@@ -15,9 +16,8 @@ body{
 .head{
     position: relative;
     height: 80px;
-    filter: blur(35px);
     display: flex;
-    background-color:rgb(76, 67, 144);
+    background-color:rgb(14, 11, 20);
 }
 
 .heading{
@@ -50,28 +50,28 @@ body{
 }
 
 #check-in{
-    background-color: rgb(109, 109, 224);
+    background-color: rgb(58, 48, 78);
     color:rgb(255, 255, 255);
     border-radius: 15px 0 0 15px;
     transition: all 0.3s;
 }
 #check-in:hover{
-    background-color:  rgb(126, 126, 251);
+    background-color:  rgb(88, 79, 107);
     transform: scale(1.1);
 }
 #join{
-    background-color: rgb(21, 21, 79);
+    background-color: rgb(58, 48, 78);
     color:rgb(230, 228, 253);
     border-radius: 0 15px 15px 0;
 }
 
 #join:hover{
-    background-color:  rgb(13, 13, 49);
+    background-color:  rgb(88, 79, 107);
     transform: scale(1.1);
 }
 
 #log{
-    background-image:radial-gradient(circle,rgb(15, 13, 30), rgb(51, 47, 85)); 
+    background-color:rgb(10, 10, 10);
     color:rgb(230, 228, 253);
     height: 100%;
     width: 100%;
@@ -91,11 +91,11 @@ body{
 }
 
 #option-frame{
-    background-color:  rgb(130, 7, 38);
+    background-color:  rgb(61, 42, 97);
     color:rgb(230, 228, 253);
     border-width: 2 0 2 2;
     border-radius: 20px 0 0 20px;
-    box-shadow: -5px 0 15px rgb(228, 32, 42);
+    box-shadow: -5px 0 20px rgb(61, 42, 97);
     margin-right:25px;
 }
 
@@ -120,7 +120,7 @@ body{
     padding-left:10px;
     padding-right:10px;
     border:none;
-    color: red;
+    color: rgb(95, 67, 67);
     border-radius: 5px 0 0 5px;
     box-shadow: 0 0 5px white;
     transition: box-shadow 0.3s;
@@ -140,18 +140,18 @@ body{
 }
 
 #con-frame{
-    background-color: rgb(204, 201, 226);
-    color:rgb(0, 0, 0);
+    background-color:rgb(27, 27, 27);
+    color:rgb(248, 248, 248);
     border-width:2 2 2 0;
     border-radius: 0 20px 20px 0;
     transform: scale(1.2);
-    box-shadow: 5px 0 15px rgb(89, 76, 187);
+    box-shadow: 5px 0 20px rgb(89, 76, 187);
     margin-left:25px;
 }
 
-#con-content input,#con-content2 input{
+#con-content input,#con-content2 input,#con-content3 input{
     display:block;
-    background-color: rgb(89, 71, 227);
+    background-color: rgb(54, 53, 63);
     border:none;
     padding:5px 10px;
     border-radius: 2px;
@@ -182,13 +182,13 @@ a:active{
 }
 
 
-#con-content button,#con-content2 button{
+#con-content button,#con-content2 button,#con-content3 button{
     margin-top:15px;
     background-color:rgb(89, 71, 227);
     border:none;
-    padding:5px 10px;
+    padding:10px 10px;
     color: white;
-    border-radius: 0 5px 5px 0;
+    border-radius:5px;
     margin-left: 10px;
     box-shadow: 0 0 2px rgb(89, 71, 227);
     transition: box-shadow .3s;
@@ -203,11 +203,9 @@ a:active{
     color: rgb(89, 71, 227);
 }
 
-#con-content2{
+#con-content2,#con-content3,#validation{
     display:none;
 }
-
-
 
 @keyframes sliding{
     0%{

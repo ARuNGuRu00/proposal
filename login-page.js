@@ -26,11 +26,13 @@ function fun1(){
 
 function fun2(){
     if (frameCon==0){
+        document.getElementById('con-content3').style='display:none';
         document.getElementById('con-content2').style='display:block';
         document.getElementById('con-content').style='display:none';
         frameCon=1;
     }
     else{
+        document.getElementById('con-content3').style='display:none';
         document.getElementById('con-content2').style='display:none';
         document.getElementById('con-content').style='display:block';
         frameCon=0;
@@ -47,4 +49,53 @@ function resFlip() {
     element_2.classList.remove('slide-animation');
     void element_2.offsetWidth; 
     element_2.classList.add('slide-animation');
+}
+
+function ran_Num(){
+    return(Math.floor(Math.random()*9)+1);
+}
+var otpNum="";
+function otp(){
+    ar=[ran_Num(),ran_Num(),ran_Num(),ran_Num(),ran_Num(),ran_Num()];
+    for (i of ar){
+        otpNum+=i;
+    }
+    return otpNum;
+}
+
+function send(){
+    const massages={
+        email:document.getElementById(`email`).value,
+        code: otp()
+    } ;
+    emailjs.send('service_ysvss7k','template_mndvdtf',massages).then(function (response){
+        console.log('sucess!',response.status,response.text);
+        document.getElementById('con-content2').style='display:none';
+        document.getElementById('con-content3').style='display:block';
+    },function(error){
+        console.log('fail');
+        document.getElementById(`validation`).style="display:block";
+        otpNum="";
+        
+    })
+}
+
+function email_send(){
+    send();
+}
+
+
+function verify(){
+    var c_otp=document.getElementById(`otp`).value
+    var c_otp=c_otp.trim()
+    console.log(typeof c_otp);
+    console.log(otpNum);
+    console.log(typeof otpNum);
+    if (String(c_otp)===otpNum){
+        console.log('its correct');
+        window.location.replace("https://arunguru00.github.io/project/");
+    }
+    else{
+        document.getElementById(`otp`).reset();
+    }
 }

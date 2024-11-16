@@ -1,3 +1,4 @@
+
 <html>
     <head>
         <link rel="stylesheet" href="login-page.css">
@@ -5,6 +6,16 @@
             @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&family=Sixtyfour+Convergence&family=Space+Grotesk:wght@300..700&display=swap');
         </style>
         <script src="login-page.js"></script>
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "R9sX-2L7n6DMc7Ao4",
+            });
+        })();
+        </script>
     </head>
     <head>
         <div id="dummy">
@@ -12,8 +23,7 @@
             <div class="heading">
                 <span>Proposal</span>
                 <div>
-                    <button id="check-in" onclick="checkFunc()">Check In</button>
-                    <button id="join" onclick="joinFunc()">Join</button>
+                    <button id="check-in" onclick="checkFunc()">Check In</button>&nbsp;<button id="join" onclick="joinFunc()">Join</button>
                 </div>
             </div>
         </div>
@@ -40,7 +50,7 @@
             </div>
             <div id="con-frame" class="flip-animation">
                 <div id="con-content">
-                    <form action="main-window.html">
+                    <form>
                         <label>Username:</label>
                         <input type="text" required>
                         <label>Password:</label>
@@ -50,11 +60,22 @@
                     </form>
                 </div>
                 <div id="con-content2">
-                    <form action="main-window.html">
+                    <form onsubmit="email_send(); return false;">
                         <label>Email Id:</label>
-                        <input type="email" required>
+                        <input id="email" name="email" type="email" required>
                         <button type="submit">JOIN ></button>
+                        
+                    </form>  
+                    <p id="validation">check you internet connect!!!</p>
+                </div>
+                <div id="con-content3">
+                    <h3>OTP verification</h3>
+                    <p>check you mail!!</p>
+                    <form onsubmit="verify();return false">
+                        <input type="text" id="otp" required>
+                        <button type="submit">verify</button>
                     </form>
+
                 </div>
             </div>
         </div>
